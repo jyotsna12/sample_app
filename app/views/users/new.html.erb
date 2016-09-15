@@ -1,0 +1,73 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+  <!--      <script type="text/javascript">
+          // When the document is ready
+          $(document).ready(function () {
+
+            $('#example1').datepicker({
+              format: "dd/mm/yyyy"
+            });
+
+          });
+        </script>-->
+        <div class="field">
+          <%= f.label :first_name %><br>
+          <%= f.text_field :first_name %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name %><br>
+          <%= f.text_field :last_name %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :password %><br>
+          <%= f.text_field :password %>
+        </div>
+        <div class="field">
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation %>
+          </div>
+<!--        <div class="field">
+          <%= f.label :common_user %><br>
+          <%= f.check_box :common_user %>
+        </div>
+        <div class="field">
+          <%= f.label :moderator %><br>
+          <%= f.check_box :moderator %>
+        </div>
+        <div class="field">
+          <%= f.label :analyst %><br>
+          <%= f.check_box :analyst %>
+        </div>
+        <div class="field">
+          <%= f.label :admin %><br>
+          <%= f.check_box :admin %>
+        </div>-->
+        <div class="actions">
+          <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+        </div>
+    <% end %>
+
+  </div>
+</div>
+
+
