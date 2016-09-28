@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.0.8'
+gem 'rails'
 gem 'pg'
 gem 'bcrypt-ruby'
 group :development, :test do
@@ -27,7 +27,10 @@ gem 'launchy'
 gem 'bootstrap-sass','2.3.2.0'
 gem 'factory_girl_rails', '4.2.0'
 gem 'poltergeist'
-
+group :development do
+gem 'better_errors'
+gem 'binding_of_caller'
+end
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end

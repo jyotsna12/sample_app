@@ -5,8 +5,8 @@ development:
   encoding: UTF-8
   database: serler_development
   host: localhost
-  username: gklarun
-  password: password
+  username: jyo12
+  password: dylantheman12
 
 test:
   # this won't work 
@@ -14,8 +14,8 @@ test:
   encoding: unicode
   database: serler_test
   pool: 5
-  username: gklarun
-  password: password
+  username: jyo12
+  password: dylantheman12
 
 production:
   # this won't work 
@@ -23,5 +23,5 @@ production:
   encoding: unicode
   database: serler_production
   pool: 5
-  username: gklarun
-  password: password
+  username: jyo12
+  password: dylantheman12
