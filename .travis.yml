@@ -1,6 +1,4 @@
 language: ruby
 rvm:
 - 2.3.0
-group :test do
-  gem 'rake'
-end
+script: ruby spec/requests/static_pages_spec.rb
